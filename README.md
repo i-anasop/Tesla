@@ -119,25 +119,23 @@ TESLA/
 
 ---
 
-## ✨ Recent Improvements (Dec 2025)
+## 💡 Credits
 
-- Speed cap at **85 MPH**
-- Smooth ABS-style acceleration/braking
-- Better traffic spawning & lane switching
-- Pedestrian crossing indicators (no traffic lights)
-- Tesla animated start UI
-- Custom scenario editor
-- Improved dashboard & color palette
+Built by **Anas** with dedication, curiosity, and a love for web3.
+
+Special thanks to **ChatGPT** for being the smartest teammate in the room 🤝
 
 ---
 
-## 👨‍💻 Credits
+## ⚖️ License & Reuse
 
-**TESLA – Autonomous Driving Simulator**  
-Showcases:
-- Safety-first autonomous logic  
-- Experience-based learning  
-- Strategic decision making  
-- Clean UI + simulation design
+This project is **open for learning and modification**.
+Feel free to fork, remix, or improve it, just credit the original author.
 
-Built with curiosity, experimentation, and respect for real-world autonomous systems.
+
+---
+
+📬 _Have feedback or want to contribute? Let’s connect!_
+## 🔗 Connect With Me
+
+- [LinkedIn](https://www.linkedin.com/in/m-ianas/)
