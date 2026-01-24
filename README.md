@@ -129,6 +129,7 @@ Built by **Anas** with dedication, curiosity, and a respect for real-world auton
 
 This project is **open for learning and modification**.
 Feel free to fork, remix, or improve it, just credit the original author.
+If you wanna check this project video, check my Linkedin Post.
 
 ---
 
