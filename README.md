@@ -121,9 +121,7 @@ TESLA/
 
 ## 💡 Credits
 
-Built by **Anas** with dedication, curiosity, and a love for web3.
-
-Special thanks to **ChatGPT** for being the smartest teammate in the room 🤝
+Built by **Anas** with dedication, curiosity, and a respect for real-world autonomous systems.
 
 ---
 
@@ -131,7 +129,6 @@ Special thanks to **ChatGPT** for being the smartest teammate in the room 🤝
 
 This project is **open for learning and modification**.
 Feel free to fork, remix, or improve it, just credit the original author.
-
 
 ---
 
