@@ -79,7 +79,7 @@ Learning is **persistent across sessions**.
 
 ## 📂 Project Structure
 
-'''
+```
 
 TESLA/
 ├── main.py
@@ -105,7 +105,7 @@ TESLA/
 ├── start_screen.py
 └── environment_editor.py
 
-'''
+```
 
 ---
 
