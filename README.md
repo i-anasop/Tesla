@@ -3,6 +3,12 @@
 A **Tesla-inspired autonomous driving simulator** built with Python & Pygame featuring AI that combines **Prolog-based safety logic**, **Minimax decision-making**, and **persistent learning**.  
 The agent improves over time by remembering danger zones and avoiding past crash patterns.
 
+### 🌐 Play Online / Test in Browser
+You can run and test the simulator directly in your browser without installing anything! 
+👉 **[Click here to play the Web Version](https://i-anasop.github.io/Tesla/)**
+
+*(Note: The first load might take a few seconds as the Pygame WebAssembly environment is initialized).*
+
 ---
 
 ## 🧠 Overview
