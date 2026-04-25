@@ -1,6 +1,7 @@
 import pygame
 import sys
 import os
+import asyncio
 import cv2
 import numpy as np
 from config import SCREEN_WIDTH, SCREEN_HEIGHT, COLORS, TITLE
@@ -97,7 +98,7 @@ class StartScreen:
         text = self.font_button.render(self.button_start['text'], True, text_color)
         self.screen.blit(text, text.get_rect(center=rect.center))
 
-    def run(self) -> str:
+    async def run(self) -> str:
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -129,3 +130,4 @@ class StartScreen:
             
             pygame.display.flip()
             self.clock.tick(30)
+            await asyncio.sleep(0)

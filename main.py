@@ -1,6 +1,7 @@
 import pygame
 import sys
 import os
+import asyncio
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -414,31 +415,32 @@ class TeslaSimulator:
         hint_rect = hint_surf.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT - 100))
         self.screen.blit(hint_surf, hint_rect)
     
-    def run(self):
+    async def run(self):
         # Main simulation loop
         while self.running:
             dt = self.clock.tick(FPS) / 1000.0
             self.handle_events()
             self.update(dt)
             self.draw()
+            await asyncio.sleep(0)
         
         self.brain.save()
         pygame.quit()
 
 
-def main():
+async def main():
     # Entry point with start screen
     pygame.init()
     pygame.display.set_caption(TITLE)
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     start_screen = StartScreen(screen)
-    mode = start_screen.run()
+    mode = await start_screen.run()
     if mode == 'quit':
         pygame.quit()
         return
     simulator = TeslaSimulator(None)
-    simulator.run()
+    await simulator.run()
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
