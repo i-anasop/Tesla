@@ -31,14 +31,37 @@ jobs:
       - name: Build with Pygbag
         run: pygbag --build .
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Customize Web Output (Favicon & Autostart)
+        run: |
+          cp assets/tesla.png build/web/favicon.png
+          cat << 'EOF' > patch.py
+          with open('build/web/index.html', 'r', encoding='utf-8') as f:
+              html = f.read()
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'build/web'
+          head_injection = """
+          <link rel="icon" type="image/png" href="favicon.png">
+          <style>
+              /* Hide all the Pygbag loading text and terminal */
+              #terminal, #status, #box { display: none !important; }
+              body { background-color: #141419; margin: 0; padding: 0; }
+          </style>
+          <script>
+              window.addEventListener('load', function() {
+                  var attemptClick = setInterval(function() {
+                      if (window.MM) window.MM.UME = true; // Bypass media wait
+                      var btn = document.getElementById('button');
+                      if (btn) {
+                          btn.click();
+                          btn.style.display = 'none';
+                          clearInterval(attemptClick);
+                      }
+                  }, 100);
+              });
+          </script>
+          """
+          html = html.replace('</head>', head_injection + '\n</head>')
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          with open('build/web/index.html', 'w', encoding='utf-8') as f:
+              f.write(html)
+          EOF
+          python patch.py
